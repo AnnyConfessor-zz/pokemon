@@ -1,10 +1,8 @@
 import React from 'react';
 
-function App() {
-  return (
-    <>
-    </>
-  );
-}
+import Profile from './screens/Profile'
+import List from './screens/List'
+
+const App = () => <List />
 
 export default App;
