@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { listPokemons } from '../services/pokeapi'
+import styled from 'styled-components'
 
 const List = () => {
     const [pokes, setPokes] = useState([])
@@ -10,7 +11,9 @@ const List = () => {
         setPokes(pokes.results)
     }, [])
 
-    console.log(pokes)
+    // console.log(pokes)
+
+    const Container = styled.div``
 
     return (
         <div className="poke-name">

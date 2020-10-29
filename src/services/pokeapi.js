@@ -7,3 +7,7 @@ export const getPokemon = id =>
 export const listPokemons = () => //nao precisa de params essa function
     fetch(`${API_URL}/pokemon/?limit=20&offset=20`)
         .then(res => res.json())
+
+export const getDetails = id =>
+    fetch(`${API_URL}/ability/${id}/`)
+        .then(res => res.json())

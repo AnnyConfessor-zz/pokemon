@@ -11,11 +11,13 @@ const Profile = () => {
     setData(data)
   }, [])
 
+  console.log(data)
+
   if (!data) return <div>Carregando...</div>
 
   return (
     <div>
-      <p>{data.name}</p>
+      <button>{data.name}</button>
       <img src={data.sprites.front_shiny}/>
     </div>
   );
