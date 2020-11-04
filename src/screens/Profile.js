@@ -1,6 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 import { getPokemon } from '../services/pokeapi'
+
+const Container = styled.div`
+width: 100px;
+height: 100px;
+display: flex;
+flex-direction: column;
+
+
+img { 
+  background-color: red;
+}
+
+button {
+  background-color: blue;
+}
+`
 
 const Profile = () => {
   const [data, setData] = useState(null)
@@ -16,10 +33,10 @@ const Profile = () => {
   if (!data) return <div>Carregando...</div>
 
   return (
-    <div>
-      <button>{data.name}</button>
-      <img src={data.sprites.front_shiny}/>
-    </div>
+    <Container>
+        <img src={data.sprites.front_shiny}/>
+        <button>{data.name}</button>
+    </Container>
   );
 }
 

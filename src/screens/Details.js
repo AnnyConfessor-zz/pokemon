@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { getDetails } from '../services/pokeapi'
 import styled from 'styled-components'
 
-const Container = styled.div``
+const Container = styled.div`
+width: 100px;
+height: 100px;
+background-color: pink;
+`
 
 const Details = () => {
     const [detail, setDetail] = useState()
@@ -16,7 +20,8 @@ const Details = () => {
     console.log(detail)
 
     return(
-        <Container></Container>
+        <Container>
+        </Container>
     )
 }
 

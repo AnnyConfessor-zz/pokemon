@@ -1,9 +1,21 @@
-import React from 'react';
+import React from 'react'
+import { 
+    Profile,
+    Details
+} from './screens/index'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import Profile from './screens/Profile'
-import List from './screens/List'
-import Details from './screens/Details';
+const App = () => {
+    return(
+        <Router>
+            <div className="App">
+                <Switch>
+                    <Route extract path="/profile" component={Profile}/>
+                    <Route extract path="/details" component={Details}/>
+                </Switch>
+            </div>
+        </Router>
+    )
+}
 
-const App = () => <Profile />
-
-export default App;
+export default App
