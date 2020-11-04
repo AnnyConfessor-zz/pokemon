@@ -3,20 +3,19 @@ import reset from 'styled-reset'
 
 export const theme = {
   colors: {
-    orange: '#FD9A0D',
-    purple: '#6625A3',
-    darkPurple: '#4F1783',
-    lightPurple: '#F8F5FB',
-    lightPurple2: '#CEBAE2',
-    newPurple: '#9D39E0',
-    darkPink: '#E31963',
-    red: '#FF5E5E',
-    blue: '#13C6EA',
-    blue2: '#3788E2',
+    goldenYellow: '#FFDE00', //Pikachu
+    orange: '#ffad52', //Charmander
+    lightPink: '#F1AAB7', //Jigglypuff
+    goldFoil: '#B3A125', //Eevee
+    red: '#FF0000', //Pikachu
+    bostonRed: '#CC0000', //Pikachu
+    blue: '#A1D9EF', //Squirtle
+    lightCobaltblue2: '#84ADD7', //Blastoise
+    deepTaupe: '#7B675B', // Blastoise
     lightBlue: '#2B75FF',
-    darkBlue: '#126CE3',
-    green: '#0ACF80',
-    darkGreen: '#08B76C',
+    ceruleanBlue: '#3B4CCA', 
+    DdarkSeaGreen: '#89C893', //Bulbasaur
+    turquoiseGreen: '#08B76C', //Bulbasaur
     white: '#FFFFFF',
     black: '#121212',
     grey: '#D1D1D1',
@@ -46,22 +45,8 @@ export const theme = {
     lg: '0.888rem', // 18px
     xl: '1.111rem', // 20px
     xxl: '1.333rem' // 24px
-  },
-  blog: {
-    cantooScribe: '',
-    lecoleDeDemain: '',
-    dysFriendly: '',
-    actusCantoo: ''
   }
 }
-Object.assign(theme, {
-  blog: {
-    cantooScribe: theme.colors.orange,
-    lecoleDeDemain: theme.colors.red,
-    dysFriendly: theme.colors.green,
-    actusCantoo: theme.colors.blue
-  }
-})
 
 export const BaseStyle = createGlobalStyle`
   ${reset}
