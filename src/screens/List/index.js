@@ -14,12 +14,23 @@ const List = () => {
         setPokes(res.results)
     }, [])
 
-    const Container = styled.div``
+const Container = styled.div`
+    width: 100%;
+    height: 100%;
+    background-color: ${props => props.theme.colors.white};
+    display: flex;
+    justify-content: center;
+    border: 1rem solid green;
+
+    /* .poke-name {
+        border: 1px solid blue;
+    } */
+`
 
     return (
-        <Container>
+        <Container alt="container-list">
             <div className="poke-name">
-                {pokes.map(item => <Card data={item} />)}
+                {pokes.map(item => <Card data={item}/>)}
             </div>
         </Container>
     )

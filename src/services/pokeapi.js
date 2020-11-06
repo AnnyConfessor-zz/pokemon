@@ -11,3 +11,7 @@ export const listPokemons = () =>
 export const getDetails = id =>
     fetch(`${API_URL}/ability/${id}/`)
         .then(res => res.json())
+
+export const getImage = () =>
+    fetch(`${API_URL}/`)
+        .then(res => res.json())

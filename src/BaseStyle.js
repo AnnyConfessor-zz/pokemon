@@ -6,6 +6,7 @@ export const theme = {
     goldenYellow: '#FFDE00', //Pikachu
     orange: '#ffad52', //Charmander
     lightPink: '#F1AAB7', //Jigglypuff
+    lightPurple: '#F8F5FB',
     goldFoil: '#B3A125', //Eevee
     red: '#FF0000', //Pikachu
     bostonRed: '#CC0000', //Pikachu
