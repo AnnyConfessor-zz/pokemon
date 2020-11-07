@@ -1,72 +1,40 @@
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import Title from 'shared/Title'
+import WrapperImage from "./WrapperImage";
+import Infos from "./Infos";
 
-import { getPokemon } from '../../../services/pokeapi'
-
-const Container = styled.div`
-    /* width: 1000px; */
-    margin-top: 1rem;
-    display: flex;
-    vertical-align: center;
-    background-color: ${props => props.theme.colors.lightPurple};
-`
+const ContainerCard = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 const Wrapper = styled.div`
-    width: 100%;
-    height: 100%;
-    background-color: ${props => props.theme.colors.lightBlue};
-    border-radius: 25px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 488px;
+  height: 268px;
+  border-radius: 20px 0px 20px 20px;
+  background: linear-gradient(
+    109.26deg,
+    rgba(133, 168, 251, 0.7) 2.03%,
+    rgba(76, 124, 238, 0.7) 50.26%,
+    rgba(21, 82, 225, 0.7) 96.52%
+  );
+  box-shadow: 0px 30px 40px -15px #1552e1;
 
-    img {
-        object-fit: cover;
-    }
-`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-const Progress = styled(Wrapper)`
-    background-color: ${props => props.theme.colors.goldenYellow};
-`
+const Card = () => {
+  return (
+    <ContainerCard alt="container-card">
+      <Wrapper alt="wrapper">
+        <WrapperImage />
+        <Infos/>
+      </Wrapper>
+    </ContainerCard>
+  );
+};
 
-const Button = styled(Wrapper)`
-    background-color: ${props => props.theme.colors.goldenYellow};
-`
-
-// const Title = styled.div`
-//     font-family: Nunito Sans;
-//     font-weight: 900;
-//     font-size: 16px;
-//     color: ${props => props.theme.colors.white};
-// `
-
-const Card = ( ) => {
-const [data, setData] = useState([])
-
-  useEffect(async () => {
-    const data = await getPokemon('ditto')
-    
-    setData(data)
-  }, [])
-
-  if (data.sprites == undefined) return <div>Carregando...</div>
-
-	return (
-			<Container alt="container-card">
-					<Wrapper alt="wrapper-card">
-							<img src={data.sprites.back_default}/>
-							<Title data={data.name} />
-							<p>Ordem: {data.order}</p>
-							<p>ID: {data.id}</p>
-					</Wrapper>
-					<Progress>
-							Progress component here
-					</Progress>
-					<Button>Button commponent here</Button>
-			</Container>
-	)
-}
-
-export default Card
+export default Card;

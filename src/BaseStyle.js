@@ -19,6 +19,7 @@ export const theme = {
     turquoiseGreen: '#08B76C', //Bulbasaur
     white: '#FFFFFF',
     black: '#121212',
+    darkGrey: '#66625c',
     grey: '#D1D1D1',
     transparent: 'transparent'
   },
