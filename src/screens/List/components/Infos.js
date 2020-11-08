@@ -24,13 +24,13 @@ const Wrapper = styled.div`
 
 const Button = styled.button`
   width: 99px;
-  height: 28,95px;
-  background-color: #FFFFFF;
-  color: #1552E1;
+  height: 28, 95px;
+  background-color: #ffffff;
+  color: #1552e1;
   border: none;
   border-radius: 10px;
   font-weight: 900;
-`
+`;
 
 const Infos = () => {
   return (

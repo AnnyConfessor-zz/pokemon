@@ -5,8 +5,6 @@ import WrapperImage from "./WrapperImage";
 import Infos from "./Infos";
 
 const ContainerCard = styled.div`
-  width: 100%;
-  height: 100%;
 `;
 
 const Wrapper = styled.div`

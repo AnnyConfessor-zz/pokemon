@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 100%;
+  width: 400px;
   height: 100%;
-
   background-color: white;
 `;
 
@@ -28,38 +27,40 @@ const Pts = styled.h2`
 `;
 
 const TextFeatures = styled(Pts)`
-    font-weight: 800;
-    color: #a39f99;
+  font-weight: 800;
+  color: #a39f99;
 `;
 
 const Progress = () => {
   return (
-    <Container>
-      <Wrapper>
-        <TextFeatures>HP</TextFeatures>
-        <Pts>20</Pts>
-        <Line />
-      </Wrapper>
-      <Wrapper>
-        <TextFeatures>HP</TextFeatures>
-        <Pts>20</Pts>
-        <Line />
-      </Wrapper>
-      <Wrapper>
-        <TextFeatures>HP</TextFeatures>
-        <Pts>20</Pts>
-        <Line />
-      </Wrapper>
-      <Wrapper>
-        <TextFeatures>HP</TextFeatures>
-        <Pts>20</Pts>
-        <Line />
-      </Wrapper>
-      <Wrapper>
-        <TextFeatures>HP</TextFeatures>
-        <Pts>20</Pts>
-        <Line />
-      </Wrapper>
+    <Container alt="container-progress">
+      <div alt="wrappers">
+        <Wrapper alt="wrapper-progress">
+          <TextFeatures>HP</TextFeatures>
+          <Pts>20</Pts>
+          <Line />
+        </Wrapper>
+        <Wrapper>
+          <TextFeatures>HP</TextFeatures>
+          <Pts>20</Pts>
+          <Line />
+        </Wrapper>
+        <Wrapper>
+          <TextFeatures>HP</TextFeatures>
+          <Pts>20</Pts>
+          <Line />
+        </Wrapper>
+        <Wrapper>
+          <TextFeatures>HP</TextFeatures>
+          <Pts>20</Pts>
+          <Line />
+        </Wrapper>
+        <Wrapper>
+          <TextFeatures>HP</TextFeatures>
+          <Pts>20</Pts>
+          <Line />
+        </Wrapper>
+      </div>
     </Container>
   );
 };

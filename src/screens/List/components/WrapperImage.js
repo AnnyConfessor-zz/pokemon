@@ -32,7 +32,7 @@ const WrapperImage = () => {
       <Figure className="img-first">
         <img src="https://pngimg.com/uploads/pokemon/pokemon_PNG161.png"></img>
       </Figure>
-      <Figure className="img-two"/>
+      {/* <Figure className="img-two"/> */}
     </Container>
   );
 };

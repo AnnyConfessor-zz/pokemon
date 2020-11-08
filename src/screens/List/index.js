@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Progress from "./components/Progress";
 
 // import { listPokemons } from "services/pokeapi";
 
-// import Card from "./components/Card";
+import Progress from "./components/Progress";
+import Card from "./components/Card";
+import ButtonRaw from "shared/Button"
+import SearchInput from "shared/SearchInput";
+import SearchBar from "shared/SearchBar";
 
 const List = () => {
   // const [pokes, setPokes] = useState([]);
@@ -20,16 +23,17 @@ const List = () => {
     height: 100%;
     background-color: ${(props) => props.theme.colors.lightPurple};
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+		align-items: center;
   `;
 
   return (
     <Container alt="container-list">
-      <div className="poke-name">
         {/* {pokes.map(item => <Card data={item}/>)} */}
-        {/* <Card /> */}
-        <Progress></Progress>
-      </div>
+        {/* <Card/>
+				<Progress/>
+				<ButtonRaw/> */}
+				<SearchBar/>
     </Container>
   );
 };
