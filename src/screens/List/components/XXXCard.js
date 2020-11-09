@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import WrapperImage from "./Image";
-import Infos from "./Infos";
+import Infos from "./XXXInfos";
 
 const ContainerCard = styled.div`
 `;

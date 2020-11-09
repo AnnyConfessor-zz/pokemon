@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import Texts from "./Texts";
+import Texts from "./XXXTexts";
 
 import { getPokemon } from "services/pokeapi";
 

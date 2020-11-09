@@ -3,41 +3,59 @@ import styled from "styled-components";
 
 import { listPokemons, getPokemon } from "services/pokeapi";
 
-import SearchBar from "shared/SearchBar";
+import SearchInput from "./components/SearchInput";
 import Card from "./components/Card";
 
 const Container = styled.div``;
 
-const List = () => {
+const NavbarContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem 0;
+`;
+
+const List = (dataInput) => {
   const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const getPokemons = async () => {
+  const getPokemons = async (name) => {
     setLoading(true);
 
     try {
-      let response = await listPokemons();
+      let response;
 
-      response = await Promise.all(response.results.map(item => getPokemon(item.name)))
+      if (!!name) {
+        response = [await getPokemon(name)]
+      } else {
+        response = await listPokemons();
 
-      setPokemons(response)
+        response = await Promise.all(
+          response.results.map((item) => getPokemon(item.name))
+        );
+      }
+
+      setPokemons(response);
     } catch (err) {
       throw new Error(err);
     }
 
-    setLoading(false)
-  }
+    setLoading(false);
+  };
 
   useEffect(() => {
     getPokemons();
   }, []);
 
-  if (loading) return <div>Carregando...</div>
-
   return (
     <Container alt="container-list">
-      <SearchBar />
-      {pokemons.map((item, index) => <Card index={index} data={item} />)}
+      <NavbarContainer>
+        <SearchInput onPress={getPokemons} />
+      </NavbarContainer>
+      {loading ? <div>Carregando...</div> : pokemons.map((item, index) => (
+        <Card index={index} data={item} />
+      ))}
     </Container>
   );
 };
