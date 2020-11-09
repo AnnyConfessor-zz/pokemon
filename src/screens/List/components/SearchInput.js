@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import Image from "./Image";
+import Icons from "./Icons";
 
 const Container = styled.div`
   width: 482px;
   height: 32px;
-  background-color: #EEE;
+  background-color: #eee;
   border-radius: 10px;
   display: flex;
 
@@ -17,7 +17,7 @@ const Container = styled.div`
     color: #555;
     font-weight: bold;
     font-size: 18px;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
 
     :focus {
       outline: none;
@@ -36,21 +36,18 @@ const Container = styled.div`
   }
 `;
 
-const SearchInput = ({ onPress }) => {
-  const [value, setValue] = useState('');
+const SearchInput = ({ onPress, name }) => {
+  const [value, setValue] = useState("");
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setValue(event.target.value);
   };
 
   return (
     <Container alt="container-search-input">
-      <input 
-        value={value}
-        onChange={handleChange}/>
-      <button 
-         onClick={() => onPress(value)}>
-          {/* <Image image={'lupa'}/> */}
+      <input value={value} onChange={handleChange} />
+      <button onClick={() => onPress(value)}>
+        <Icons name={'lupa'} />
       </button>
     </Container>
   );

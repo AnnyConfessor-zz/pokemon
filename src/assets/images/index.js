@@ -1,4 +1,5 @@
-export default {
-    'pikachu': require('./pikachu.svg'),
+const icons = {
     'lupa': require('./lupa.svg')
 }
+
+export default icons

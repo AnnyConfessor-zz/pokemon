@@ -43,12 +43,13 @@ const Progress = styled.div`
   /* margin: 0.5rem 0; */
 `;
 
-const Status = () => {
+const Status = ( { index, data }) => {
   return (
     <Container alt="container-status">
       <Content alt="wrappers">
         <Wrapper alt="wrapper-status">
-          <Name>HP</Name>
+          {/* data. */}
+          <Name>HP</Name> 
           <Value>20</Value>
           <Progress />
         </Wrapper>

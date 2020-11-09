@@ -24,31 +24,6 @@ export const theme = {
     grey: '#D1D1D1',
     transparent: 'transparent'
   },
-  textWeights: {
-    normal: '400',
-    semiBold: '600',
-    bold: '700',
-    extraBold: '800'
-  },
-  textSizes: {
-    xxl: '4rem', // 72px
-    xl: '2.8rem', // 46px
-    llg: '2rem', // 26px
-    lg: '1.8rem', // 30px
-    mmd: '1.4rem',
-    md: '1.15rem', // 22px
-    sm: '1rem',
-    xs: '0.888rem'
-  },
-  shadow: '0px 0px 11px #0000002C',
-  space: {
-    xs: '0.222rem', // 4px
-    sm: '0.444rem', // 8px
-    md: '0.666rem', // 12px
-    lg: '0.888rem', // 18px
-    xl: '1.111rem', // 20px
-    xxl: '1.333rem' // 24px
-  }
 }
 
 export const BaseStyle = createGlobalStyle`
