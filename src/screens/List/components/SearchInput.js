@@ -50,7 +50,7 @@ const SearchInput = ({ onPress }) => {
         onChange={handleChange}/>
       <button 
          onClick={() => onPress(value)}>
-          <Image image={'lupa'}/>
+          {/* <Image image={'lupa'}/> */}
       </button>
     </Container>
   );

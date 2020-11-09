@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-import Image from './Image'
-import SymbolType from './SymbolType'
-import SpecialAbilities from './SpecialAbilities'
-import Status from './Status'
+import Image from "./Image";
+import SymbolType from "./SymbolType";
+import SpecialAbilities from "./SpecialAbilities";
+import Status from "./Status";
 
 const Wrapper = styled.div`
-display: flex;
-padding: 2rem;
-${props => props.active && 'background: #EEE;'}
+  display: flex;
+  /* align-items: center; */
+  padding: 2rem;
+  ${(props) => props.active && "background: #EEE;"}
 `;
 
 const ContainerInfo = styled.div`
@@ -24,41 +25,42 @@ const ContainerInfo = styled.div`
     rgba(21, 82, 225, 0.7) 96.52%
   );
   box-shadow: 0px 30px 40px -15px #1552e1;
-`
+`;
 
 const ContainerImage = styled.div`
   background: rgba(255, 255, 255, 0.3);
   border-radius: 0 20px 20px 0;
   margin: 4rem 0;
   padding: 1rem 2rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 `;
 
 const ContainerInfos = styled.div`
-display: flex;
-flex-direction: column;
-padding-left: 2rem;
-`
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+`;
 
 const Text = styled.span`
-text-transform: capitalize;
-font-size: 1.5rem;
-font-weight: bold;
-color: white;
-padding-bottom: .5rem;
-`
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 0.5rem;
+`;
 
 const Detail = styled(Text)`
-font-size: 1rem;
-color: #EEE;
-`
+  font-size: 1rem;
+  color: #eee;
+`;
 
-const ContainerStatus = styled.div``
-
-
+const ContainerStatus = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 const Card = ({ index, data }) => {
-  console.log('RESX3', data.name)
+  // console.log("RESX3", data.name);
 
   return (
     <Wrapper active={index % 2 === 0} alt="container-generalcard">
@@ -75,8 +77,8 @@ const Card = ({ index, data }) => {
         </ContainerInfos>
       </ContainerInfo>
       <ContainerStatus>
-          <Status />
-        </ContainerStatus>
+        <Status />
+      </ContainerStatus>
     </Wrapper>
   );
 };
