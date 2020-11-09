@@ -5,10 +5,12 @@ import Image from "./Image";
 import SymbolType from "./SymbolType";
 import SpecialAbilities from "./SpecialAbilities";
 import Status from "./Status";
+import Button from "./Button";
 
 const Wrapper = styled.div`
   display: flex;
-  /* align-items: center; */
+  justify-content: space-around;
+  align-items: center;
   padding: 2rem;
   ${(props) => props.active && "background: #EEE;"}
 `;
@@ -59,6 +61,8 @@ const ContainerStatus = styled.div`
   align-items: center;
 `;
 
+const ContainerDetails = styled.div``
+
 const Card = ({ index, data }) => {
   // console.log("RESX3", data.name);
 
@@ -79,6 +83,9 @@ const Card = ({ index, data }) => {
       <ContainerStatus>
         <Status />
       </ContainerStatus>
+      <ContainerDetails>
+        <Button/>
+      </ContainerDetails>
     </Wrapper>
   );
 };
