@@ -4,7 +4,8 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 400px;
   height: 100%;
-  background-color: white;
+  background-color: #60CDE4;
+  border-radius: 10px;
 `;
 
 const Wrapper = styled.div`
@@ -16,7 +17,8 @@ const Line = styled.div`
   height: 15px;
   margin-bottom: 1rem;
   border-radius: 5px;
-  background-color: #e9e8e7;
+  background-color: white;
+  margin: 0.5rem 0;
 `;
 
 const Pts = styled.h2`
@@ -28,7 +30,7 @@ const Pts = styled.h2`
 
 const TextFeatures = styled(Pts)`
   font-weight: 800;
-  color: #a39f99;
+  color: white;
 `;
 
 const Progress = () => {

@@ -15,6 +15,7 @@ export const theme = {
     deepTaupe: '#7B675B', // Blastoise
     lightBlue: '#2B75FF',
     ceruleanBlue: '#3B4CCA', 
+    darkBlue: '#1552E1', //sendo usado ok
     DdarkSeaGreen: '#89C893', //Bulbasaur
     turquoiseGreen: '#08B76C', //Bulbasaur
     white: '#FFFFFF',

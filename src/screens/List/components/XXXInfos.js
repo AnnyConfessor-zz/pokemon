@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Texts from "./Texts";
+
+import { getPokemon } from "services/pokeapi";
 
 const Container = styled.div`
   width: 100%;
@@ -33,11 +35,26 @@ const Button = styled.button`
 `;
 
 const Infos = () => {
+  const [poke, setPoke] = useState([]);
+
+  useEffect(() => {
+    async function FetchData() {
+      const res = await getPokemon(1);
+      setPoke(res);
+      console.log(res);
+    }
+    FetchData();
+  }, []);
+
+  if (poke.sprites === undefined) {
+    <div>Carregando...</div>;
+  }
+
   return (
     <Container alt="container-infos">
       <Wrapper>
         <Texts />
-        <Button>Water</Button>
+        {/* <Button>{poke.types[0].type.name}</Button> */}
       </Wrapper>
     </Container>
   );

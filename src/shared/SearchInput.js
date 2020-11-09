@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
+import Image from 'shared/Images'
+
 const Container = styled.div`
-  width: 350px;
+  width: 482px;
   height: 32px;
-  background-color: #3bc659;
+  background-color: ${(props) => props.theme.colors.darkBlue};
   border-radius: 10px;
   display: flex;
 
@@ -12,7 +14,7 @@ const Container = styled.div`
     flex: 1;
     border: none;
     background: transparent;
-    color: #ffffff;
+    color: #FFFF;
     font-weight: bold;
     font-size: 18px;
 
@@ -38,7 +40,7 @@ const SearchInput = () => {
     <Container alt="container-search-input">
       <input/>
       <button>
-        <img src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48---cone-de-pesquisa-by-vexels.png"/>
+        <Image name={'lupa'}/>
       </button>
     </Container>
   );
