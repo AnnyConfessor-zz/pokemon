@@ -36,7 +36,7 @@ const Container = styled.div`
   }
 `;
 
-const SearchInput = ({ onPress, name }) => {
+const SearchInput = ({ onPress }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (event) => {

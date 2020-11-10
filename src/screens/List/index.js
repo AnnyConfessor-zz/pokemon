@@ -16,7 +16,7 @@ const NavbarContainer = styled.div`
   margin: 1.5rem 0;
 `;
 
-const List = (dataInput) => {
+const List = () => {
   const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(false);
 

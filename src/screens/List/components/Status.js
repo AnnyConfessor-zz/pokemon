@@ -2,24 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  /* background: red; */
-  /* box-shadow: 0px 30px 40px -15px #eee; */
-  border-radius: 20px 20px 20px 20px;
-
-  padding-top: 1rem;
-  margin-left: 2rem;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  margin-left: 1rem;
+  display: grid;
+  grid-template-columns: 100px 90px 100px;
+  /* background-color: green; */
 `;
 
 const Name = styled.p`
@@ -34,46 +19,35 @@ const Value = styled(Name)`
   margin: 0 1rem;
 `;
 
-const Progress = styled.div`
-  width: 300px;
+const ProgressWrapper = styled.div`
+  width: 200px;
   height: 15px;
   margin-bottom: 1rem;
   border-radius: 5px;
-  background-color: #D1D1D1;
-  /* margin: 0.5rem 0; */
+  background-color: #d1d1d1;
+  overflow: hidden;
+  border-radius: 5px;
 `;
 
-const Status = ( { index, data }) => {
+const Progress = styled.div`
+  width: calc(100% - ${(props) => props.value * 0.1});
+  height: 100%;
+  /* background: red; */
+`;
+
+const Status = ({ name, value }) => {
+  //name e value sendo extraídos para um componet superior
+  // const [status, setStatus] = useState("");
+
   return (
     <Container alt="container-status">
-      <Content alt="wrappers">
-        <Wrapper alt="wrapper-status">
-          {/* data. */}
-          <Name>HP</Name> 
-          <Value>20</Value>
-          <Progress />
-        </Wrapper>
-        <Wrapper alt="wrapper-status">
-          <Name>HP</Name>
-          <Value>20</Value>
-          <Progress />
-        </Wrapper>
-        <Wrapper alt="wrapper-status">
-          <Name>HP</Name>
-          <Value>20</Value>
-          <Progress />
-        </Wrapper>
-        <Wrapper alt="wrapper-status">
-          <Name>HP</Name>
-          <Value>20</Value>
-          <Progress />
-        </Wrapper>
-        <Wrapper alt="wrapper-status">
-          <Name>HP</Name>
-          <Value>20</Value>
-          <Progress />
-        </Wrapper>
-      </Content>
+      {/* <Wrapper> */}
+      <Name>{name}</Name>
+      <Value>{value}</Value>
+      {/* </Wrapper> */}
+      <ProgressWrapper>
+        <Progress value={50} />
+      </ProgressWrapper>
     </Container>
   );
 };

@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 const ContainerInfo = styled.div`
   display: flex;
   align-items: center;
-  width: 488px;
+  width: 400px;
   border-radius: 20px 20px 20px 20px;
   background: linear-gradient(
     109.26deg,
@@ -58,6 +58,7 @@ const Detail = styled(Text)`
 
 const ContainerStatus = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
 `;
 
@@ -74,13 +75,15 @@ const Card = ({ index, data }) => {
         </ContainerImage>
         <ContainerInfos>
           <Text>{data.name}</Text>
-          <Detail>Weight: {data.weight}lb</Detail>
-          <Detail>Height: {data.height}m</Detail>
+          <Detail>Weight: {data.weight} lb</Detail>
+          <Detail>Height: {data.height} m</Detail>
           <SpecialAbilities data={data.abilities} />
         </ContainerInfos>
       </ContainerInfo>
       <ContainerStatus>
-        <Status />
+        {data.stats.map(item => (
+          <Status name={item.stat.name} value={item.base_stat} />
+        ))}
       </ContainerStatus>
       <ContainerDetails>
         <Button/>
