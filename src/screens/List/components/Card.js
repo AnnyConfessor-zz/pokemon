@@ -64,7 +64,6 @@ const ContainerStatus = styled.div`
 const ContainerDetails = styled.div``
 
 const Card = ({ index, data }) => {
-  // console.log("RESX3", data.name);
 
   return (
     <Wrapper active={index % 2 === 0} alt="container-generalcard">
