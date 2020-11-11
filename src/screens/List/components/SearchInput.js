@@ -47,7 +47,7 @@ const SearchInput = ({ onPress }) => {
     <Container alt="container-search-input">
       <input value={value} onChange={handleChange} />
       <button onClick={() => onPress(value)}>
-        <Icon name={'lupa'} />
+        <Icon name="lupa" />
       </button>
     </Container>
   );
