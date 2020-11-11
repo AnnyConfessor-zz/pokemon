@@ -3,50 +3,57 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 100px 90px 100px;
+  grid-template-columns: 120px 50px 200px;
   /* background-color: green; */
 `;
 
 const Name = styled.p`
-  font-weight: 800;
-  color: #555;
+  font-weight: bold;
+  color: #999;
+  text-align: right;
+  text-transform: capitalize;
 `;
 
 const Value = styled(Name)`
   font-family: Rubik, sans-serif;
-  line-height: 1.25;
-  font-size: 13px;
-  margin: 0 1rem;
+  font-weight: lighter;
+  font-size: 14px;
+  text-align: center;
+  color: black;
 `;
 
 const ProgressWrapper = styled.div`
   width: 200px;
-  height: 15px;
+  height: 12px;
   margin-bottom: 1rem;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #d1d1d1;
   overflow: hidden;
   border-radius: 5px;
 `;
 
 const Progress = styled.div`
-  width: calc(100% - ${(props) => props.value * 0.1});
+  width: calc(100% * (${props => props.value} * 0.005));
   height: 100%;
-  /* background: red; */
+  background-color: ${props => getProgressColor(props.value)};
 `;
 
-const Status = ({ name, value }) => {
-  //name e value sendo extraídos para um componet superior
-  // const [status, setStatus] = useState("");
+const getProgressColor = value => {
+  if (value > 150) return '#5a9c39'
+  if (value > 100) return '#f5c400'
+  if (value > 50) return '#f59700'
+  return '#de4141'
+}
+
+const Status = ({ name, value}) => {
+  const parsedName = (() => name.split('-').join(' '))()
 
   return (
     <Container alt="container-status">
-      {/* <Wrapper> */}
-      <Name>{name}</Name>
+      <Name>{parsedName}</Name>
       <Value>{value}</Value>
-      {/* </Wrapper> */}
       <ProgressWrapper>
-        <Progress value={50} />
+        <Progress value={value} />
       </ProgressWrapper>
     </Container>
   );
