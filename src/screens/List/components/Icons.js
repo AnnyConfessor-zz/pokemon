@@ -1,14 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import images from 'assets/images'
+import icons from "./../../../assets/images";
 
 const Img = styled.img`
-width: 100px;
-height: 100px;
-`
+  width: 100px;
+  height: 100px;
+`;
 
-const Image = ({ name, ...props }) =>
-    <Img src={images[name]} alt="icon" {...props} />
+const Icon = ({ name, ...props }) => {
+    console.log('aaa', icons[name])
+  return <Img src={icons[name]} alt="icon component" {...props} />;
+};
 
-export default Image
+export default Icon;

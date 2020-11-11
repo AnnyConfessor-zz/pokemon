@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import Icons from "./Icons";
+import Icon from "./Icons";
 
 const Container = styled.div`
   width: 482px;
@@ -47,7 +47,7 @@ const SearchInput = ({ onPress }) => {
     <Container alt="container-search-input">
       <input value={value} onChange={handleChange} />
       <button onClick={() => onPress(value)}>
-        <Icons name={'lupa'} />
+        <Icon name={'lupa'} />
       </button>
     </Container>
   );
