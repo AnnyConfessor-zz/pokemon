@@ -54,8 +54,8 @@ const List = () => {
         <SearchInput onPress={getPokemons} />
       </NavbarContainer>
       {loading ? <div>Carregando...</div> : pokemons.map((item, index) => (
-        <Card index={index} data={item} status={item}/>
-      ))}
+        <Card index={index} data={item}/>
+        ))}
     </Container>
   );
 };

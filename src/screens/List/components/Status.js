@@ -39,9 +39,9 @@ const Progress = styled.div`
 `;
 
 const getProgressColor = value => {
-  if (value > 150) return '#5a9c39'
-  if (value > 100) return '#f5c400'
-  if (value > 50) return '#f59700'
+  if (value >= 100) return '#5a9c39'
+  if (value >= 70) return '#f5c400'
+  if (value > 30) return '#f59700'
   return '#de4141'
 }
 
